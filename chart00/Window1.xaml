@@ -21,6 +21,7 @@
 
             <chartingtoolkit:LineSeries
                 Name="line01"
+                Title="s1"
                 DependentValuePath="Value"
                 IndependentValuePath="Key"
                 IsSelectionEnabled="False"
@@ -28,8 +29,8 @@
                 <chartingtoolkit:LineSeries.DependentRangeAxis>
                     <chartingtoolkit:LinearAxis
                         Name="Y_Max"
-                        Interval="100"
-                        Maximum="{Binding}"
+                        Interval="50"
+                        Maximum="500"
                         Minimum="0"
                         Orientation="Y"
                         ShowGridLines="True" />
@@ -39,6 +40,7 @@
 
             <chartingtoolkit:LineSeries
                 Name="line02"
+                Title="s2"
                 DependentValuePath="Value"
                 IndependentValuePath="Key"
                 IsSelectionEnabled="False"

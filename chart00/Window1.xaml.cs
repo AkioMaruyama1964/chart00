@@ -30,7 +30,7 @@ namespace chart00
             line01.DataContext = valueList01;
             line02.DataContext = valueList02;
             _chart.Title = "Hoge chart";
-            //line01.DependentRangeAxis.DependentAxes.Max = 500;
+            //line01.Maximum = 500;
         }
 
         public List<KeyValuePair<string, int>> valueList01 = new List<KeyValuePair<string, int>>();
