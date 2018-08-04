@@ -1,0 +1,48 @@
+﻿<Window
+    x:Class="chart00.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:chartingtoolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:chart00"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Window1"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+
+
+    <Grid>
+        <chartingtoolkit:Chart
+            Name="_chart"
+            Title="{Binding}"
+            Height="Auto"
+            Margin="0,0,0,0">
+
+            <chartingtoolkit:LineSeries
+                Name="line01"
+                DependentValuePath="Value"
+                IndependentValuePath="Key"
+                IsSelectionEnabled="False"
+                ItemsSource="{Binding}">
+                <chartingtoolkit:LineSeries.DependentRangeAxis>
+                    <chartingtoolkit:LinearAxis
+                        Name="Y_Max"
+                        Interval="100"
+                        Maximum="{Binding}"
+                        Minimum="0"
+                        Orientation="Y"
+                        ShowGridLines="True" />
+
+                </chartingtoolkit:LineSeries.DependentRangeAxis>
+            </chartingtoolkit:LineSeries>
+
+            <chartingtoolkit:LineSeries
+                Name="line02"
+                DependentValuePath="Value"
+                IndependentValuePath="Key"
+                IsSelectionEnabled="False"
+                ItemsSource="{Binding}" />
+        </chartingtoolkit:Chart>
+    </Grid>
+</Window>
